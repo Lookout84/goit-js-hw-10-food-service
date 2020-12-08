@@ -7,8 +7,8 @@ const refs = {
 };
 
 const Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme',
+  LIGHT: 'theme-light',
+  DARK: 'theme-dark',
 };
 
 const LIGHT = JSON.stringify(Theme.LIGHT);
@@ -23,11 +23,13 @@ function themeSwitch(event) {
     refs.body.classList.add('light-theme');
     refs.body.classList.remove('dark-theme');
     localStorage.setItem('light', LIGHT);
+    localStorage.removeItem('dark', DARK);
   }
   if (inputChecked === true) {
     refs.body.classList.remove('light-theme');
     refs.body.classList.add('dark-theme');
     localStorage.setItem('dark', DARK);
+    localStorage.removeItem('light', LIGHT);
   }
   console.dir(event.currentTarget.checked);
 }
