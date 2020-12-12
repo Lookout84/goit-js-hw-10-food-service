@@ -42,4 +42,3 @@ function savedDarkTheme() {
 const markup = menuTemplate(menu);
 
 refs.menu.insertAdjacentHTML('beforeend', markup);
-console.log(refs.menu);
