@@ -27,9 +27,6 @@ function themeSwitch(event) {
   const inputChecked = event.currentTarget.checked;
   if (inputChecked === false) {
     replaceTheme(Theme.DARK, Theme.LIGHT);
-    // refs.body.classList.add(Theme.LIGHT);
-    // refs.body.classList.remove(Theme.DARK);
-    // localStorage.setItem('theme', Theme.LIGHT);
   } else {
     replaceTheme(Theme.LIGHT, Theme.DARK);
   }
